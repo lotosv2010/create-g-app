@@ -9,6 +9,7 @@ import {
   red,
   yellow
 } from 'kolorist'
+import { pkgManager } from './command'
 
 export type ColorFunc = (str: string | number) => string
 export type Framework = {
@@ -34,7 +35,7 @@ export const FRAMEWORKS: Framework[] = [
         name: 'vite',
         display: 'Vite ↗',
         color: yellow,
-        customCommand: 'pnpm create vite TARGET_DIR'
+        customCommand: `${pkgManager} create vite TARGET_DIR`
       }
     ]
   },
@@ -47,37 +48,37 @@ export const FRAMEWORKS: Framework[] = [
         name: 'react',
         display: 'JavaScript',
         color: yellow,
-        customCommand: 'pnpm create react-app TARGET_DIR'
+        customCommand: `${pkgManager} create react-app TARGET_DIR`
       },
       {
         name: 'react-ts',
         display: 'TypeScript',
         color: blue,
-        customCommand: 'pnpm create react-app TARGET_DIR --template typescript'
+        customCommand: `${pkgManager} create react-app TARGET_DIR --template typescript`
       },
       {
         name: 'next',
         display: 'Next ↗',
         color: green,
-        customCommand: 'pnpm create next-app TARGET_DIR'
+        customCommand: `${pkgManager} create next-app TARGET_DIR`
       },
       {
         name: 'remix',
         display: 'Remix ↗',
         color: lightGreen,
-        customCommand: 'pnpm create remix TARGET_DIR'
+        customCommand: `${pkgManager} create remix TARGET_DIR`
       },
       {
         name: 'gatsby',
         display: 'Gatsby ↗',
         color: lightRed,
-        customCommand: 'pnpm create gatsby TARGET_DIR'
+        customCommand: `${pkgManager} create gatsby TARGET_DIR`
       },
       {
         name: 'expo',
         display: 'Expo ↗',
         color: red,
-        customCommand: 'pnpm create expo-app TARGET_DIR'
+        customCommand: `${pkgManager} create expo-app TARGET_DIR`
       }
     ]
   },
